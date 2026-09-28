@@ -1,0 +1,8 @@
+{
+  "name": "S&M Capital | Gestión Patrimonial y Educación Financiera",
+  "description": "Firma financiera de gestión de capital, análisis técnico independiente y educación para la preservación patrimonial y prevención de fraudes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
