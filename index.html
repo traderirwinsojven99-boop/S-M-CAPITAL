@@ -1,20 +1,323 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S&M Capital | Gestión Patrimonial y Educación Financiera</title>
-    <meta name="description" content="Firma financiera de gestión de capital, análisis técnico independiente y educación para la preservación patrimonial y prevención de fraudes." />
-    <meta property="og:title" content="S&M Capital | Gestión Patrimonial y Educación Financiera" />
-    <meta property="og:description" content="Firma financiera de gestión de capital, análisis técnico independiente y educación para la preservación patrimonial y prevención de fraudes." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-[#080B10] text-[#E2E8F0] selection:bg-[#D4AF37]/30 selection:text-[#FFF8E7] antialiased">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#F1C40F',
+                            500: '#D4AF37',
+                            600: '#AA7C11',
+                        },
+                        dark: {
+                            900: '#0B0E14',
+                            800: '#151922',
+                            700: '#1E2330',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-900 text-gray-200 font-sans antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Header / Navbar -->
+    <header class="fixed w-full top-0 z-50 bg-dark-900/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="font-serif text-2xl font-bold tracking-widest text-gold-500">S&M CAPITAL</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#inicio" class="hover:text-gold-400 transition">Inicio</a>
+                <a href="#nosotros" class="hover:text-gold-400 transition">Quiénes Somos</a>
+                <a href="#planes" class="hover:text-gold-400 transition">Planes</a>
+                <a href="#calculadora" class="hover:text-gold-400 transition">Calculadora</a>
+                <a href="#contacto" class="hover:text-gold-400 transition">Contacto</a>
+            </nav>
+            <a href="#contacto" class="bg-gold-500 text-black px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-gold-400 transition">Agendar Asesoría</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-32 pb-20 px-4 max-w-7xl mx-auto text-center">
+        <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase bg-gold-500/10 px-4 py-1.5 rounded-full border border-gold-500/20">Firma Privada de Gestión Patrimonial • Guatemala</span>
+        <h1 class="font-serif text-4xl sm:text-6xl font-bold text-white mt-6 mb-6 leading-tight">
+            GESTIÓ​N PROFESIONAL DE CAPITAL Y <span class="text-gold-500">EDUCACIÓ​N TRANSPARENTE.</span>
+        </h1>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto mb-10">
+            Protegemos y hacemos crecer tu patrimonio mediante análisis técnico riguroso de mercados globales, transparencia absoluta y una firme oposición a esquemas especulativos o fraudes.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#calculadora" class="bg-gold-500 text-black px-8 py-4 rounded-xl font-bold hover:bg-gold-400 transition shadow-lg shadow-gold-500/10">Proyectar Rendimiento</a>
+            <a href="#nosotros" class="border border-gray-700 bg-dark-800 text-white px-8 py-4 rounded-xl font-semibold hover:border-gold-500/50 transition">Conocer Nuestra Historia</a>
+        </div>
+    </section>
+
+    <!-- Nosotros / Historia Section -->
+    <section id="nosotros" class="py-20 bg-dark-800 border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="font-serif text-3xl font-bold text-white mb-4">Quiénes Somos</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-gray-300 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-white">Una historia real detrás de S&M Capital</h3>
+                    <p>
+                        El inicio en el mundo de los mercados financieros no fue un camino sencillo. Como muchos, comenzamos navegando en un entorno saturado de información superficial, promesas vacías e incluso esquemas engañosos que solo buscaban aprovecharse de la falta de educación financiera.
+                    </p>
+                    <p>
+                        En ese trayecto de prueba y error, estudio técnico independiente y horas de análisis en los gráficos (TradingView), entendimos lo difícil que es encontrar una guía honesta.
+                    </p>
+                    <p>
+                        S&M Capital nació precisamente para acortar ese camino. Queremos ser el faro transparente que a nosotros nos hubiera gustado encontrar en el pasado, blindando a nuestros clientes de fraudes y ofreciendo rendimientos reales mediante operativa institucional.
+                    </p>
+                </div>
+                <div class="bg-dark-700 p-8 rounded-2xl border border-gray-700 space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-gold-500/10 p-3 rounded-lg text-gold-400 font-bold">01</div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Transparencia Radical</h4>
+                            <p class="text-sm text-gray-400">Sin comisiones ocultas ni promesas irrealizables. Cuentas claras respaldadas por contratos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-gold-500/10 p-3 rounded-lg text-gold-400 font-bold">02</div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Gestión Rigurosa de Riesgo</h4>
+                            <p class="text-sm text-gray-400">Preservación del capital como prioridad número uno en cada operación financiera.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-gold-500/10 p-3 rounded-lg text-gold-400 font-bold">03</div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Presencia Local Real</h4>
+                            <p class="text-sm text-gray-400">Atención personalizada y ubicación corporativa en Zona 15, Ciudad de Guatemala.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes Section -->
+    <section id="planes" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="font-serif text-3xl font-bold text-white mb-4">Modelos de Inversión</h2>
+            <p class="text-gray-400">Estructuras transparentes adaptadas a tus objetivos financieros.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Modalidad A -->
+            <div class="bg-dark-800 p-8 rounded-2xl border border-gray-800 hover:border-gold-500/50 transition flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold text-gold-400 uppercase tracking-widest">Modalidad A</span>
+                    <h3 class="text-2xl font-bold text-white mt-2 mb-4">Gestión Patrimonial</h3>
+                    <p class="text-gray-400 text-sm mb-6">Diseñada para capitales consolidados que buscan un rendimiento profesional a mediano y largo plazo.</p>
+                    <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                        <li class="flex items-center gap-2">✓ Montos desde Q500 hasta Q50,000 Quetzales</li>
+                        <li class="flex items-center gap-2">✓ Análisis técnico de precisión (SMC)</li>
+                        <li class="flex items-center gap-2">✓ Informes periódicos de rendimiento</li>
+                    </ul>
+                </div>
+                <a href="#calculadora" class="w-full text-center bg-dark-700 text-white py-3 rounded-xl font-semibold hover:bg-gold-500 hover:text-black transition">Simular Capital Único</a>
+            </div>
+
+            <!-- Modalidad B -->
+            <div class="bg-dark-800 p-8 rounded-2xl border border-gold-500/30 hover:border-gold-500 transition relative flex flex-col justify-between">
+                <div class="absolute -top-3 right-6 bg-gold-500 text-black text-xs font-bold px-3 py-1 rounded-full">Popular</div>
+                <div>
+                    <span class="text-xs font-bold text-gold-400 uppercase tracking-widest">Modalidad B</span>
+                    <h3 class="text-2xl font-bold text-white mt-2 mb-4">Ahorro Programado (Cuchubal Formal)</h3>
+                    <p class="text-gray-400 text-sm mb-6">La alternativa formal y segura frente al ahorro informal. Construye tu patrimonio mes a mes.</p>
+                    <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                        <li class="flex items-center gap-2">✓ Aportes mensuales de Q200 a Q1,000 Quetzales</li>
+                        <li class="flex items-center gap-2">✓ Rendimiento e interés compuesto real</li>
+                        <li class="flex items-center gap-2">✓ Respaldado por contrato seguro</li>
+                    </ul>
+                </div>
+                <a href="#calculadora" class="w-full text-center bg-gold-500 text-black py-3 rounded-xl font-bold hover:bg-gold-400 transition">Simular Ahorro Programado</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculadora Section -->
+    <section id="calculadora" class="py-20 bg-dark-800 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl font-bold text-white mb-4">Calculadora de Rendimiento Estimado</h2>
+                <p class="text-gray-400 text-sm">Selecciona tu modalidad y ajusta los valores para proyectar tus resultados.</p>
+            </div>
+
+            <div class="bg-dark-900 p-6 sm:p-10 rounded-2xl border border-gray-700 shadow-2xl">
+                <!-- Selector de Modalidad -->
+                <div class="flex bg-dark-800 p-1.5 rounded-xl mb-8">
+                    <button id="btnModA" onclick="setModalidad('A')" class="flex-1 py-3 text-sm font-bold rounded-lg transition bg-gold-500 text-black">Modalidad A: Capital Único</button>
+                    <button id="btnModB" onclick="setModalidad('B')" class="flex-1 py-3 text-sm font-bold rounded-lg transition text-gray-400 hover:text-white">Modalidad B: Ahorro Programado</button>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Slider Monto -->
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span id="lblMonto" class="text-gray-300 font-medium">Capital Inicial (Monto Único)</span>
+                            <span id="valMonto" class="font-bold text-gold-400 text-lg">Q 10,000</span>
+                        </div>
+                        <input type="range" id="inputMonto" min="500" max="50000" step="500" value="10000" oninput="calcular()" class="w-full accent-gold-500 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between text-xs text-gray-500 mt-1">
+                            <span id="minMonto">Q 500</span>
+                            <span id="maxMonto">Q 50,000</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider Plazo -->
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-gray-300 font-medium">Plazo de Gestión (Meses)</span>
+                            <span id="valPlazo" class="font-bold text-gold-400 text-lg">12 Meses</span>
+                        </div>
+                        <input type="range" id="inputPlazo" min="3" max="24" step="1" value="12" oninput="calcular()" class="w-full accent-gold-500 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between text-xs text-gray-500 mt-1">
+                            <span>3 meses</span>
+                            <span>24 meses</span>
+                        </div>
+                    </div>
+
+                    <!-- Resultados -->
+                    <div class="grid grid-cols-2 gap-4 bg-dark-800 p-6 rounded-xl border border-gray-700 mt-8">
+                        <div>
+                            <span class="text-xs text-gray-400 block mb-1">Rendimiento Estimado</span>
+                            <span id="resGanancia" class="text-xl sm:text-2xl font-bold text-green-400">Q 1,500.00</span>
+                        </div>
+                        <div>
+                            <span class="text-xs text-gray-400 block mb-1">Total Proyectado</span>
+                            <span id="resTotal" class="text-xl sm:text-2xl font-bold text-gold-400">Q 11,500.00</span>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-500 text-center leading-relaxed">
+                        *Nota: Las proyecciones son simulaciones basadas en promedios estimados de rendimiento mensual (1.25% aprox). Los rendimientos pasados no garantizan resultados futuros.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-20 max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="font-serif text-3xl font-bold text-white mb-6">Ponte en Contacto</h2>
+                <p class="text-gray-400 mb-8">
+                    ¿Tienes dudas sobre nuestros modelos de gestión o te ofrecieron una propuesta dudosa? Escríbenos directamente y te asesoramos con total transparencia.
+                </p>
+                <div class="space-y-4 text-gray-300 text-sm">
+                    <p class="flex items-center gap-3">📍 Torre Corporativa / Design Center, Zona 15, Ciudad de Guatemala</p>
+                    <p class="flex items-center gap-3">💬 Atención directa vía WhatsApp y Telegram</p>
+                </div>
+            </div>
+            <form class="bg-dark-800 p-8 rounded-2xl border border-gray-800 space-y-4" onsubmit="event.preventDefault(); alert('Gracias por tu mensaje. Nos pondremos en contacto contigo a la brevedad.');">
+                <div>
+                    <label class="block text-xs font-medium text-gray-400 mb-1">Nombre Completo</label>
+                    <input type="text" required class="w-full bg-dark-900 border border-gray-700 rounded-lg px-4 py-2.5 text-white focus:border-gold-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gray-400 mb-1">Correo Electrónico o Teléfono</label>
+                    <input type="text" required class="w-full bg-dark-900 border border-gray-700 rounded-lg px-4 py-2.5 text-white focus:border-gold-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gray-400 mb-1">Mensaje o Consulta</label>
+                    <textarea rows="4" required class="w-full bg-dark-900 border border-gray-700 rounded-lg px-4 py-2.5 text-white focus:border-gold-500 outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-gold-500 text-black font-bold py-3 rounded-lg hover:bg-gold-400 transition">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 border-t border-gray-800 py-8 text-center text-xs text-gray-500">
+        <p>© 2026 S&M Capital. Firma Privada de Gestión Patrimonial. Zona 15, Guatemala.</p>
+    </footer>
+
+    <!-- Lógica JavaScript de la Calculadora -->
+    <script>
+        let modalidad = 'A'; // 'A' o 'B'
+
+        function setModalidad(mod) {
+            modalidad = mod;
+            const btnA = document.getElementById('btnModA');
+            const btnB = document.getElementById('btnModB');
+            const lblMonto = document.getElementById('lblMonto');
+            const inputMonto = document.getElementById('inputMonto');
+            const minMonto = document.getElementById('minMonto');
+            const maxMonto = document.getElementById('maxMonto');
+
+            if (mod === 'A') {
+                btnA.className = "flex-1 py-3 text-sm font-bold rounded-lg transition bg-gold-500 text-black";
+                btnB.className = "flex-1 py-3 text-sm font-bold rounded-lg transition text-gray-400 hover:text-white";
+                lblMonto.innerText = "Capital Inicial (Monto Único)";
+                inputMonto.min = 500;
+                inputMonto.max = 50000;
+                inputMonto.step = 500;
+                inputMonto.value = 10000;
+                minMonto.innerText = "Q 500";
+                maxMonto.innerText = "Q 50,000";
+            } else {
+                btnB.className = "flex-1 py-3 text-sm font-bold rounded-lg transition bg-gold-500 text-black";
+                btnA.className = "flex-1 py-3 text-sm font-bold rounded-lg transition text-gray-400 hover:text-white";
+                lblMonto.innerText = "Aporte Mensual (Cuchubal Formal)";
+                inputMonto.min = 200;
+                inputMonto.max = 1000;
+                inputMonto.step = 50;
+                inputMonto.value = 500;
+                minMonto.innerText = "Q 200";
+                maxMonto.innerText = "Q 1,000";
+            }
+            calcular();
+        }
+
+        function calcular() {
+            const monto = parseFloat(document.getElementById('inputMonto').value);
+            const meses = parseInt(document.getElementById('inputPlazo').value);
+
+            document.getElementById('valMonto').innerText = "Q " + monto.toLocaleString('es-GT');
+            document.getElementById('valPlazo').innerText = meses + " Meses";
+
+            let ganancia = 0;
+            let total = 0;
+            const tasaMensual = 0.0125; // 1.25% mensual estimado
+
+            if (modalidad === 'A') {
+                total = monto * Math.pow((1 + tasaMensual), meses);
+                ganancia = total - monto;
+            } else {
+                // Ahorro programado
+                let acumulado = 0;
+                for (let i = 0; i < meses; i++) {
+                    acumulado = (acumulado + monto) * (1 + tasaMensual);
+                }
+                total = acumulado;
+                const totalInvertido = monto * meses;
+                ganancia = total - totalInvertido;
+            }
+
+            document.getElementById('resGanancia').innerText = "Q " + ganancia.toLocaleString('es-GT', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            document.getElementById('resTotal').innerText = "Q " + total.toLocaleString('es-GT', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        }
+
+        // Inicializar
+        calcular();
+    </script>
+</body>
 </html>
